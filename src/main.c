@@ -2,10 +2,7 @@
 
 #define autonSelect 0
 
-#define BACK_LEFT_MOTOR_REV true
-#define FRONT_LEFT_MOTOR_REV true
-#define BACK_RIGHT_MOTOR_REV false
-#define FRONT_RIGHT_MOTOR_REV false
+// removed unnessisary variables 30/1/24
 
 // --------------------------------------------------  Drivetrian ports
 #define FRONT_RIGHT_MOTOR 1 
@@ -35,10 +32,10 @@ extern int sensorValue;
 
 void initialize() {
     //reversing
-    motor_set_reversed(BACK_LEFT_MOTOR, BACK_LEFT_MOTOR_REV);
-    motor_set_reversed(FRONT_LEFT_MOTOR, FRONT_LEFT_MOTOR_REV);
-	//motor_set_reversed(BACK_RIGHT_MOTOR, BACK_RIGHT_MOTOR_REV);
-    //motor_set_reversed(FRONT_RIGHT_MOTOR, FRONT_RIGHT_MOTOR_REV);
+    motor_set_reversed(BACK_LEFT_MOTOR, true); //changed to normal true value from a variable 30/1/24
+    motor_set_reversed(FRONT_LEFT_MOTOR, true); //changed to normal true value from a variable 30/1/24
+	motor_set_reversed(BACK_RIGHT_MOTOR, false); //changed to normal true value from a variable 30/1/24
+    motor_set_reversed(FRONT_RIGHT_MOTOR, false); //changed to normal true value from a variable 30/1/24
     motor_set_reversed(ARM_RIGHT, true);
     motor_set_reversed(support, false);
     motor_set_reversed(rachet, true);
