@@ -1,3 +1,5 @@
+// removed link from this and moved all of these to main.c
+//keeping this file for reference
 // -------------------------------------------------- Settings
 #define turningReversed 1 // 1 for true and -1 for false
 #define drivingReversed 1 // 1 for true and -1 for false
