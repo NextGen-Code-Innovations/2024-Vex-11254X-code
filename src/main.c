@@ -27,7 +27,7 @@
 #define INTERIA_PORT 18
 #define ARM_ROT_SENSOR 19
 #define Radio_Port 21
-#define Auton_Selection_port 1 //A
+//removed auton selection port as we removed the button and added the variable 30/1/24
 extern int sensorValue;
 
 void initialize() {
