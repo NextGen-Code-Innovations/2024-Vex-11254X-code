@@ -22,8 +22,7 @@
 #define support 12
 
 // ---------------------------------------------------  Sensors 
-#define ROTATION_RIGHT_PORT 16
-#define ROTATION_LEFT_PORT 17
+//removed drivetrain rotation port as we removed the sensor 30/1/24
 #define INTERIA_PORT 18
 #define ARM_ROT_SENSOR 19
 #define Radio_Port 21
