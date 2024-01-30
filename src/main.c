@@ -129,6 +129,7 @@ void FlyWheel_FN(){ //edited 18/1/24
     static bool launch_on = false;
     static bool rev_on = false;
     static bool in_on = false;
+    // the last 3 lines are variables to check which option to use
 
     for (;;) {
         if (controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_A)) //launch
