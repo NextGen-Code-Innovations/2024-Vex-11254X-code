@@ -179,7 +179,7 @@ void support_FN(){ //edited 18/1/24
 
 void PNU_FN(){ //edited 30/1/24
     for (;;) {
-        if(controller_get_digital(CONTROLLER_MASTER, DIGITAL_LEFT)) {
+        if(controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_LEFT)) {
             adi_digital_write(1, LOW);
             adi_digital_write(2,LOW);
         } else {
