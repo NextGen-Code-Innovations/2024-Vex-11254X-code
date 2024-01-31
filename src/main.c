@@ -1,5 +1,4 @@
 #include "main.h"
-
 #define autonSelect 0
 
 // removed unnessisary variables 30/1/24
@@ -100,6 +99,13 @@ void autonomous(){ //Added 19/1/24  Edited 20/1/24
         motor_brake(FLY_WHEEL_MOTOR);
         motor_brake(ARM_LEFT);
         motor_brake(ARM_RIGHT);
+    } else if (autonSelect == 2) { // started 31/1/24
+        motor_move_absolute(BACK_RIGHT_MOTOR, 2000, 100);
+        motor_move_absolute(BACK_LEFT_MOTOR, 2000, 100);
+        motor_move_absolute(FRONT_LEFT_MOTOR, 2000, 100);
+        motor_move_absolute(FRONT_RIGHT_MOTOR, 2000, 100);
+        //move back into the diagonal bar
+
     }
 }
 
