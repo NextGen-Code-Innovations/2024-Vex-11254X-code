@@ -52,7 +52,7 @@ void initialize() {
 
     //adi ports 
     // updated 30/1/24 
-    adi_port_set_config(1, ADI_DIGITAL_IN); // port a
+    adi_port_set_config(1, ADI_DIGITAL_OUT); // changed input to an output 21/1/24
     adi_port_set_config(2, ADI_DIGITAL_OUT);
     adi_port_set_config(PNU_PORT, ADI_DIGITAL_OUT);
 }
