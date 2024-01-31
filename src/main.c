@@ -188,8 +188,8 @@ void PNU_FN(){ //edited 30/1/24
             adi_digital_write(1, LOW);
             adi_digital_write(2,LOW);
         } else {
-            //adi_digital_write(1, HIGH);
-            //adi_digital_write(2, HIGH);
+            adi_digital_write(1, HIGH);
+            adi_digital_write(2, HIGH);
         }
         task_delay(2);
     }
