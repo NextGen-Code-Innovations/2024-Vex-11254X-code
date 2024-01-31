@@ -311,7 +311,7 @@
     "upload_options": {
       "icon": "pizza",
       "after": "screen",
-      "slot": 2,
+      "slot": 1,
       "description": "we know this works"
     }
   }
