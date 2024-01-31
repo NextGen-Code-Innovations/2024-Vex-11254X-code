@@ -1,7 +1,6 @@
 #include "main.h"
 
 #define autonSelect 0
-int pnuTrue = 0 //added 31/1/24
 
 // removed unnessisary variables 30/1/24
 
@@ -179,6 +178,7 @@ void support_FN(){ //edited 18/1/24
 }
 
 void PNU_FN(){ //edited 30/1/24
+    static int pnuTrue = 0; // added 31/1/24
     for (;;) {
         if(controller_get_digital(CONTROLLER_MASTER, DIGITAL_LEFT) && pnuTrue == 0) {
             pnuTrue = 1;
