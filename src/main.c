@@ -180,11 +180,11 @@ void support_FN(){ //edited 18/1/24
 void PNU_FN(){ //edited 30/1/24
     for (;;) {
         if(controller_get_digital(CONTROLLER_MASTER, DIGITAL_LEFT)) {
-            adi_digital_write(1, HIGH);
-            adi_digital_write(2,HIGH);
-        } else {
             adi_digital_write(1, LOW);
-            adi_digital_write(2, LOW);
+            adi_digital_write(2,LOW);
+        } else {
+            adi_digital_write(1, HIGH);
+            adi_digital_write(2, HIGH);
         }
         task_delay(2);
     }
