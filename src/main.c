@@ -183,11 +183,11 @@ void PNU_FN(){ //edited 30/1/24
         if(controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_LEFT))
             pnuOn = !pnuOn;
         if(pnuOn){
-            adi_digital_write(1, LOW);
-            adi_digital_write(2,LOW);
-        } else {
             adi_digital_write(1, HIGH);
-            adi_digital_write(2, HIGH);
+            adi_digital_write(2,HIGH);
+        } else {
+            adi_digital_write(1, LOW);
+            adi_digital_write(2, LOW);
         }
         task_delay(2);
     }
