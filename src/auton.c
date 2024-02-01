@@ -34,21 +34,8 @@ void autonomous(){ //Added 19/1/24  Edited 20/1/24
         motor_brake(FRONT_RIGHT_MOTOR);
 
     } else if (autonSelect == 1) {
-        motor_move(FLY_WHEEL_MOTOR, -127);
-        delay(500);
-
-        motor_move_absolute(support, 100, 100);
-        delay(20);
-
-        motor_brake(support);
-        motor_move(ARM_LEFT, -127);
-        motor_move(ARM_RIGHT, -127);
-        delay(3000);
-
-        motor_brake(FLY_WHEEL_MOTOR);
-        motor_brake(ARM_LEFT);
-        motor_brake(ARM_RIGHT);
-    } else if (autonSelect == 2) { // started 31/1/24
+        
+    } else if (autonSelect == 2) { // started 31/1/24 ALSO SKILS 
         motor_move_absolute(BACK_RIGHT_MOTOR, 2000, 100);
         motor_move_absolute(BACK_LEFT_MOTOR, 2000, 100);
         motor_move_absolute(FRONT_LEFT_MOTOR, 2000, 100);
