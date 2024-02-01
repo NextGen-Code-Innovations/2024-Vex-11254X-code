@@ -30,8 +30,8 @@ extern int sensorValue;
 
 void initialize() {
     //reversing
-    motor_set_reversed(BACK_LEFT_MOTOR, true); //changed to normal true value from a variable 30/1/24
-    motor_set_reversed(FRONT_LEFT_MOTOR, true); //changed to normal true value from a variable 30/1/24
+    motor_set_reversed(BACK_LEFT_MOTOR, true); //changed 1/2/24
+    motor_set_reversed(FRONT_LEFT_MOTOR, true); //changed 1/2/24
 	motor_set_reversed(BACK_RIGHT_MOTOR, false); //changed to normal true value from a variable 30/1/24
     motor_set_reversed(FRONT_RIGHT_MOTOR, false); //changed to normal true value from a variable 30/1/24
     motor_set_reversed(ARM_RIGHT, true);
@@ -61,10 +61,10 @@ void disabled() {}
 void competition_initialize() {}
 
 void autonomous(){ //Added 19/1/24  Edited 1/2/24
-    motor_move_absolute(BACK_RIGHT_MOTOR, 1000, 100);
+    motor_move_absolute(BACK_RIGHT_MOTOR, 1000, -100);
     motor_move_absolute(BACK_LEFT_MOTOR, 1000, 100);
     motor_move_absolute(FRONT_LEFT_MOTOR, 1000, 100);
-    motor_move_absolute(FRONT_RIGHT_MOTOR, 1000, 100);
+    motor_move_absolute(FRONT_RIGHT_MOTOR, 1000, -100);
 }
 
 void drive_FN(){  // this is the main drive function for the robot for op control -- DO NOT CHANGE
