@@ -2,7 +2,6 @@
 #define autonSelect 1000
 
 // removed unnessisary variables 30/1/24
-
 // --------------------------------------------------  Drivetrian ports
 #define FRONT_RIGHT_MOTOR 1 
 #define FRONT_LEFT_MOTOR 2
@@ -61,7 +60,9 @@ void disabled() {}
 void competition_initialize() {}
 
 void autonomous(){ //Added 19/1/24  Edited 1/2/24
-    if(autonSelect == 1000) {
+    if(autonSelect == 0){
+        autonomous0();
+    } else if(autonSelect == 1000) {
         autonomousTest();
     }
 }
