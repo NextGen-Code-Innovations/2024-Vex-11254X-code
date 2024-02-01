@@ -15,7 +15,6 @@
 #ifndef _PROS_MAIN_H_
 #define _PROS_MAIN_H_
 
-#include "functions.h"
 #include "variables.h"
 
 

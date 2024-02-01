@@ -1,5 +1,4 @@
 #include "main.h"
-#include "auton.h"
 
 void autonomous0(){ //Added 1/2/24
     
