@@ -1,0 +1,7 @@
+Wings:
+Rachet:
+Launch:
+Intake:
+Out-Take:
+Arm Up:
+Arm Down:
