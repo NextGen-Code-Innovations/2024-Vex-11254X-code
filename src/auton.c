@@ -8,7 +8,7 @@ void rightSide() {
 void func2(void) {
   printf("Function 2!\n");
 }
-
+/*
 void autonomous(){ //Added 19/1/24  Edited 20/1/24
     if(autonSelect == 0){
         motor_move_absolute(BACK_RIGHT_MOTOR, 3850, 100);
@@ -44,3 +44,4 @@ void autonomous(){ //Added 19/1/24  Edited 20/1/24
 
     }
 }
+*/
