@@ -24,3 +24,10 @@ void autonomous0(){ //Added 1/2/24
     motor_brake(FRONT_LEFT_MOTOR);
     motor_brake(FRONT_RIGHT_MOTOR);
 }
+
+void autonomousTest(){
+    motor_move_absolute(BACK_RIGHT_MOTOR, 1000, -100);
+    motor_move_absolute(BACK_LEFT_MOTOR, 1000, 100);
+    motor_move_absolute(FRONT_LEFT_MOTOR, 1000, 100);
+    motor_move_absolute(FRONT_RIGHT_MOTOR, 1000, -100);
+}
