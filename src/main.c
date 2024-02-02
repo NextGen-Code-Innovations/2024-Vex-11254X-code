@@ -110,11 +110,11 @@ void FlyWheel_FN(){ //edited 18/1/24
     // the last 3 lines are variables to check which option to use
 
     for (;;) {
-        if (controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_A)) //launch
+        if (controller_get_digital_new_press(CONTROLLER_MASTER, launchControl)) //launch
             launch_on = !launch_on;
-        if (controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_R2)) //out
+        if (controller_get_digital_new_press(CONTROLLER_MASTER, outTakeControl)) //out
             rev_on = !rev_on;
-        if (controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_R1)) //in
+        if (controller_get_digital_new_press(CONTROLLER_MASTER, intakeControl)) //in
             in_on = !in_on;
         if (launch_on && !rev_on && !in_on) // launch
             motor_move(FLY_WHEEL_MOTOR, 80);
@@ -149,7 +149,7 @@ void ARM_FN(){ //edited 28/1/24
 void PNU_FN(){ //edited 30/1/24
     static int pnuOn = 0; // added 31/1/24
     for (;;) {
-        if(controller_get_digital_new_press(CONTROLLER_MASTER, DIGITAL_LEFT))
+        if(controller_get_digital_new_press(CONTROLLER_MASTER, wingsControl))
             pnuOn = !pnuOn;
         if(pnuOn){
             adi_digital_write(1, HIGH);
@@ -166,7 +166,7 @@ void rachet_FN(){ // X engage
 //edited 30/1/24 
     int stopRachet = 0;
     for (;;) {
-        if(controller_get_digital(CONTROLLER_MASTER, DIGITAL_X) && stopRachet == 0) {
+        if(controller_get_digital(CONTROLLER_MASTER, rachetControl) && stopRachet == 0) {
             stopRachet == 1;
             motor_move(rachet, 100);
         } else {
