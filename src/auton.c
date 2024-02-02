@@ -26,8 +26,8 @@ void autonomous0(){ //Added 1/2/24
 }
 
 void autonomousTest(){
-    motor_move_absolute(BACK_RIGHT_MOTOR, 1000, -100);
-    motor_move_absolute(BACK_LEFT_MOTOR, 1000, 100);
-    motor_move_absolute(FRONT_LEFT_MOTOR, 1000, 100);
-    motor_move_absolute(FRONT_RIGHT_MOTOR, 1000, -100);
+    motor_move_relative(BACK_RIGHT_MOTOR, 1000, 100);
+    motor_move_relative(BACK_LEFT_MOTOR, 1000, 100);
+    motor_move_relative(FRONT_LEFT_MOTOR, 1000, 100);
+    motor_move_relative(FRONT_RIGHT_MOTOR, 1000, 100);
 }
