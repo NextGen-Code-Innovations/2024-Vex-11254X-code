@@ -144,16 +144,7 @@ void ARM_FN(){ //edited 28/1/24
     }
 } // This moves the arm
 
-void support_FN(){ //edited 18/1/24
-    for (;;) {
-        if (controller_get_digital(CONTROLLER_MASTER, DIGITAL_Y)){
-            motor_move(support, 20);
-        } else {
-            motor_brake(support);
-        }
-        task_delay(2);
-    }
-}
+//void support_FN(){} removed 2/2/24
 
 void PNU_FN(){ //edited 30/1/24
     static int pnuOn = 0; // added 31/1/24
@@ -189,7 +180,6 @@ void opcontrol(){  //-----------------------------------------------------------
     task_create(drive_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Drive");
     task_create(FlyWheel_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Fly Wheel launch");
     task_create(ARM_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Arm down");
-    task_create(support_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "support movement");
     task_create(PNU_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Air thing");
     task_create(rachet_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "rachet");
 }
