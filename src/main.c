@@ -130,10 +130,10 @@ void FlyWheel_FN(){ //edited 18/1/24
 
 void ARM_FN(){ //edited 28/1/24
     for (;;) {
-        if (controller_get_digital(CONTROLLER_MASTER, DIGITAL_L1)) {// up
+        if (controller_get_digital(CONTROLLER_MASTER, armUpControl)) {// up
             motor_move(ARM_LEFT, 60);
             motor_move(ARM_RIGHT, 60);
-        } else if (controller_get_digital(CONTROLLER_MASTER, DIGITAL_L2)) { //down
+        } else if (controller_get_digital(CONTROLLER_MASTER, armDownControl)) { //down
             motor_move(ARM_LEFT, -60);
             motor_move(ARM_RIGHT, -60);
         } else {
