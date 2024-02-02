@@ -1,6 +1,12 @@
 #include "main.h"
 #define autonSelect 1000
 
+//==================================================================================
+// controls 
+
+
+//==================================================================================
+
 // removed unnessisary variables 30/1/24
 // --------------------------------------------------  Drivetrian ports
 #define FRONT_RIGHT_MOTOR 1 
@@ -24,6 +30,7 @@
 #define INTERIA_PORT 18
 #define ARM_ROT_SENSOR 19
 #define Radio_Port 21
+
 //removed auton selection port as we removed the button and added the variable 30/1/24
 extern int sensorValue;
 
