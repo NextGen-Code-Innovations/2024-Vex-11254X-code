@@ -4,6 +4,13 @@
 //==================================================================================
 // controls 
 
+#define armUpControl DIGITAL_L1
+#define armDownControl DIGITAL_R1
+#define outTakeControl DIGITAL_A
+#define intakeControl DIGITAL_B
+#define launchControl DIGITAL_RIGHT
+#define wingsControl DIGITAL_UP
+#define rachetControl DIGITAL_LEFT
 
 //==================================================================================
 
