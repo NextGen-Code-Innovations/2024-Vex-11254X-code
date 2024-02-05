@@ -11,7 +11,6 @@
 #define launchControl DIGITAL_RIGHT
 #define wingsControl DIGITAL_UP
 #define rachetControl DIGITAL_LEFT
-#define flagControl DIGITAL_DOWN //added 5/2/24
 
 //==================================================================================
 
@@ -25,7 +24,6 @@
 // --------------------------------------------------  PENUMATICS
 #define LEFT_PNU_PORT 1 //A
 #define RIGHT_PNU_PORT 2 //B
-#define FLAG_PNU_PORT  3 //C // added 5/2/24
 
 // -------------------------------------------------- Extra motor ports
 #define FLY_WHEEL_MOTOR 6
@@ -123,7 +121,7 @@ void FlyWheel_FN(){ //edited 18/1/24
         else if (!launch_on && rev_on && !in_on) // out
             motor_move(FLY_WHEEL_MOTOR, -125);
         else if (!launch_on && !rev_on && in_on)  // in
-            motor_move(FLY_WHEEL_MOTOR, 80);
+            motor_move(FLY_WHEEL_MOTOR, 125);
         else
             motor_brake(FLY_WHEEL_MOTOR);
         task_delay(2);
@@ -154,11 +152,11 @@ void PNU_FN(){ //edited 30/1/24
         if(controller_get_digital_new_press(CONTROLLER_MASTER, wingsControl))
             pnuOn = !pnuOn;
         if(pnuOn){
-            adi_digital_write(LEFT_PNU_PORT, HIGH);
-            adi_digital_write(RIGHT_PNU_PORT,HIGH);
+            adi_digital_write(1, HIGH);
+            adi_digital_write(2,HIGH);
         } else {
-            adi_digital_write(LEFT_PNU_PORT, LOW);
-            adi_digital_write(RIGHT_PNU_PORT, LOW);
+            adi_digital_write(1, LOW);
+            adi_digital_write(2, LOW);
         }
         task_delay(2);
     }
@@ -178,13 +176,9 @@ void rachet_FN(){ // X engage
     }
 } //Description: This engages the rachet using x to rotate the motor while being held; the driver can press it which is enough time for it to rotate enough to engage the rachet
 
-void flag_FN(){ //added 5/2/24
-    for(;;) {
-        if(controller_get_digital(CONTROLLER_MASTER, flagControl)){
-            adi_digital_write(FLAG_PNU_PORT, HIGH);
-        } else {
-            adi_digital_write(FLAG_PNU_PORT, LOW);
-        }
+void flag_FN(){
+    for (;;) {
+        //if()
     }
 }
 
@@ -194,5 +188,4 @@ void opcontrol(){  //-----------------------------------------------------------
     task_create(ARM_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Arm down");
     task_create(PNU_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Air thing");
     task_create(rachet_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "rachet");
-    task_create(flag_FN, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "flag air thing");
 }
