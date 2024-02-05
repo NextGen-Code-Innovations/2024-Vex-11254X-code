@@ -123,7 +123,7 @@ void FlyWheel_FN(){ //edited 18/1/24
         else if (!launch_on && rev_on && !in_on) // out
             motor_move(FLY_WHEEL_MOTOR, -125);
         else if (!launch_on && !rev_on && in_on)  // in
-            motor_move(FLY_WHEEL_MOTOR, 125);
+            motor_move(FLY_WHEEL_MOTOR, 80);
         else
             motor_brake(FLY_WHEEL_MOTOR);
         task_delay(2);
